@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Parabéns Rhadassa, porraaaaaaaaaa!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffd6ec, #ff66c4);
+      font-family: 'Pacifico', cursive;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      margin-top: 10vh;
+    }
+
+    h1 {
+      font-size: 60px;
+      color: #fff;
+      text-shadow: 0 0 20px #ff66c4, 0 0 40px #fff;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff66c4, 0 0 20px #fff;
+      }
+      to {
+        text-shadow: 0 0 30px #fff, 0 0 60px #ff66c4;
+      }
+    }
+
+    .balloons {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      pointer-events: none;
+    }
+
+    .balloon {
+      width: 60px;
+      height: 80px;
+      background: radial-gradient(circle at 30% 30%, #fff, #ff69b4);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: absolute;
+      animation: float 10s linear infinite;
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: #fff;
+      transform: translateX(-50%);
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .sparkles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .sparkle {
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      animation: sparkle 2s infinite ease-in-out;
+    }
+
+    @keyframes sparkle {
+      0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎀 Parabéns Rhadassa, Gostosa do krl 🎉</h1>
+    <footer>Barbie do Rio Branco 🎀</footer>
+  </div>
+
+  <div class="galeria">
+  <img src="rhadassaa.png" alt="Barbie RB">
+  <img src="rb.png">
+  <img src="rdb.png.jpg">
+  </div>
+
+  <style>
+  .galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.galeria img {
+  width: 180px;
+  border-radius: 20px;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+   </style>
+  
+  <div class="balloons"></div>
+  <div class="sparkles"></div>
+
+  <!-- Música de fundo (link exemplo de música no estilo Barbie) -->
+  <audio id="musica" loop>
+  <source src="barbie.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio.
+</audio>
+
+<button onclick="document.getElementById('musica').play()" style="padding: 10px 20px; background: #ff66c4; color: white; border: none; border-radius: 10px;">
+  ▶ Toque aqui, ouça essa relíquia
+</button>
+
+  <script>
+    // Balões
+    for (let i = 0; i < 30; i++) {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * 100 + 'vw';
+      balloon.style.animationDuration = (6 + Math.random() * 5) + 's';
+      document.querySelector('.balloons').appendChild(balloon);
+    }
+
+    // Brilhos
+    for (let i = 0; i < 100; i++) {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.left = Math.random() * 100 + 'vw';
+      sparkle.style.top = Math.random() * 100 + 'vh';
+      sparkle.style.animationDelay = Math.random() * 2 + 's';
+      document.querySelector('.sparkles').appendChild(sparkle);
+    }
+  </script>
+</body>
+</html>
