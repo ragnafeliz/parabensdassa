@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parabéns Rhadassa, porraaaaaaaaaa!</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <style>
@@ -12,15 +13,16 @@
       font-family: 'Pacifico', cursive;
       color: white;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     .container {
       margin-top: 10vh;
+      padding: 0 5vw;
     }
 
     h1 {
-      font-size: 60px;
+      font-size: 8vw;
       color: #fff;
       text-shadow: 0 0 20px #ff66c4, 0 0 40px #fff;
       animation: glow 2s infinite alternate;
@@ -106,8 +108,37 @@
 
     footer {
       margin-top: 40px;
-      font-size: 18px;
+      font-size: 1rem;
       color: #fff;
+    }
+
+    .galeria {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      padding: 0 5vw;
+    }
+
+    .galeria img {
+      width: 40vw;
+      max-width: 180px;
+      border-radius: 20px;
+      border: 3px solid white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 4vw 6vw;
+      background: #ff66c4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      max-width: 90vw;
     }
   </style>
 </head>
@@ -118,43 +149,22 @@
   </div>
 
   <div class="galeria">
-  <img src="rhadassaa.png" alt="Barbie RB">
-  <img src="rb.png">
-  <img src="rdb.png.jpg">
+    <img src="rhadassaa.png" alt="Barbie RB">
+    <img src="rb.png" alt="Imagem 2">
+    <img src="rdb.png.jpg" alt="Imagem 3">
   </div>
 
-  <style>
-  .galeria {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.galeria img {
-  width: 180px;
-  border-radius: 20px;
-  border: 3px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-}
-
-   </style>
-  
   <div class="balloons"></div>
   <div class="sparkles"></div>
 
-  <!-- Música de fundo (link exemplo de música no estilo Barbie) -->
   <audio id="musica" loop>
-  <source src="barbie.mp3" type="audio/mpeg">
-  Seu navegador não suporta áudio.
-</audio>
+    <source src="barbie.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
 
-<button onclick="document.getElementById('musica').play()" style="padding: 40px 60px; background: #ff66c4; color: white; border: none; border-radius: 10px;">
-  ▶ Toque aqui, ouça essa relíquia
-</button>
+  <button onclick="document.getElementById('musica').play()">
+    ▶ Toque aqui, ouça essa relíquia
+  </button>
 
   <script>
     // Balões
